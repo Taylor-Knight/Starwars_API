@@ -37,6 +37,14 @@ class StarwarsController extends BaseController
         return $planets;
     }
 
+    public function species(Request $request){
+
+        $userInput = $_GET['searchSpecies']; 
+        $species = file_get_contents('https://swapi.dev/api/species/'.$userInput); 
+        
+        return $species;
+    }
+
     public function index(){
 
         // $everything = file_get_contents('https://swapi.dev/api/'); //everything

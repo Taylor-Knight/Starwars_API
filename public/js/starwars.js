@@ -83,3 +83,31 @@ function displayPlanet(obj){
     var planetContainer = $(document.getElementById('planetContainer'))
     planetContainer.html(html)
 }
+
+function speciesSearch(){
+    $.ajax({
+        url: "/species",
+        type:'GET',
+        data: {
+            searchSpecies: $("#searchSpecies").val()
+        }, success: function(data) { 
+            const obj = JSON.parse(data);
+            displaySpecies(obj)
+            
+      },
+      error: function(xhr) {
+       
+      }
+    });
+}
+
+function displaySpecies(obj){
+    var html = '';
+
+    Object.keys(obj).forEach(key => {
+        html += key + ' : ' + obj[key] + '<br>'
+    });
+    
+    var speciesContainer = $(document.getElementById('speciesContainer'))
+    speciesContainer.html(html)
+}

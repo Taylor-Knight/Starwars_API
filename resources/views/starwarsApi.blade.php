@@ -40,7 +40,12 @@
     </div>
     <div id="planetContainer"></div>
 
-    
+    <div>
+        <label for="searchSpecies">Species Search:</label>
+        <span><input type="text" id="searchSpecies" name="searchSpecies">
+        <button type="button" onClick="speciesSearch()">Search</button></span>
+    </div>
+    <div id="speciesContainer"></div>
 </body>
 </html>
 
