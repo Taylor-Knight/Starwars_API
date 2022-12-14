@@ -21,6 +21,14 @@ class StarwarsController extends BaseController
         return $people;
     }
 
+    public function films(Request $request){
+
+        $userInput = $_GET['searchFilms']; 
+        $films = file_get_contents('https://swapi.dev/api/films/'.$userInput); 
+        
+        return $films;
+    }
+
     public function index(){
 
         // $everything = file_get_contents('https://swapi.dev/api/'); //everything

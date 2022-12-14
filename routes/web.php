@@ -21,3 +21,8 @@ Route::get('/', 'App\Http\Controllers\StarwarsController@index');
 //struggles to get display this as a webpage initially
 
 Route::get('/people', 'App\Http\Controllers\StarwarsController@people'); //
+Route::get('/films', 'App\Http\Controllers\StarwarsController@films'); 
+Route::get('/starships', 'App\Http\Controllers\StarwarsController@starships');
+Route::get('/vehicles', 'App\Http\Controllers\StarwarsController@vehicles');
+Route::get('/species', 'App\Http\Controllers\StarwarsController@species');
+Route::get('/planets', 'App\Http\Controllers\StarwarsController@planets');
