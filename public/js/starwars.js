@@ -84,15 +84,15 @@ function displayPlanet(obj){
     planetContainer.html(html)
 }
 
-function speciesSearch(){
+function starshipSearch(){
     $.ajax({
-        url: "/species",
+        url: "/starships",
         type:'GET',
         data: {
-            searchSpecies: $("#searchSpecies").val()
+            searchStarships: $("#searchStarships").val()
         }, success: function(data) { 
             const obj = JSON.parse(data);
-            displaySpecies(obj)
+            displayStarships(obj)
             
       },
       error: function(xhr) {
@@ -101,13 +101,13 @@ function speciesSearch(){
     });
 }
 
-function displaySpecies(obj){
+function displayStarships(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
         html += key + ' : ' + obj[key] + '<br>'
     });
     
-    var speciesContainer = $(document.getElementById('speciesContainer'))
-    speciesContainer.html(html)
+    var starshipContainer = $(document.getElementById('starshipContainer'))
+    starshipContainer.html(html)
 }

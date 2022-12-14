@@ -46,6 +46,13 @@
         <button type="button" onClick="speciesSearch()">Search</button></span>
     </div>
     <div id="speciesContainer"></div>
+
+    <div>
+        <label for="searchStarships">Starship Search:</label>
+        <span><input type="text" id="searchStarships" name="searchStarships">
+        <button type="button" onClick="starshipSearch()">Search</button></span>
+    </div>
+    <div id="starshipContainer"></div>
 </body>
 </html>
 
