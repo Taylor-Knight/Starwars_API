@@ -53,6 +53,14 @@
         <button type="button" onClick="starshipSearch()">Search</button></span>
     </div>
     <div id="starshipContainer"></div>
+
+    <div>
+        <label for="searchVehicles">Vehicle Search:</label>
+        <span><input type="text" id="searchVehicles" name="searchVehicles">
+        <button type="button" onClick="vehicleSearch()">Search</button></span>
+    </div>
+    <div id="vehicleContainer"></div>
+    // vehicles api searches dont appear to be working on the site
 </body>
 </html>
 

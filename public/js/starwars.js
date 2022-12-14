@@ -111,3 +111,31 @@ function displayStarships(obj){
     var starshipContainer = $(document.getElementById('starshipContainer'))
     starshipContainer.html(html)
 }
+
+function vehicleSearch(){
+    $.ajax({
+        url: "/vehicles",
+        type:'GET',
+        data: {
+            searchVehicles: $("#searchVehicles").val()
+        }, success: function(data) { 
+            const obj = JSON.parse(data);
+            displayVehicles(obj)
+            
+      },
+      error: function(xhr) {
+       
+      }
+    });
+}
+
+function displayVehicles(obj){
+    var html = '';
+
+    Object.keys(obj).forEach(key => {
+        html += key + ' : ' + obj[key] + '<br>'
+    });
+    
+    var vehicleContainer = $(document.getElementById('vehicleContainer'))
+    vehicleContainer.html(html)
+}

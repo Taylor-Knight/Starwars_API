@@ -53,6 +53,14 @@ class StarwarsController extends BaseController
         return $starships;
     }
 
+    public function vehicles(Request $request){
+
+        $userInput = $_GET['searchVehicles']; 
+        $vehicles = file_get_contents('https://swapi.dev/api/vehicles/'.$userInput); 
+        
+        return $vehicles;
+    }
+
     public function index(){
 
         // $everything = file_get_contents('https://swapi.dev/api/'); //everything
