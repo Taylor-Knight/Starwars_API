@@ -29,13 +29,21 @@ class StarwarsController extends BaseController
         return $films;
     }
 
+    public function planets(Request $request){
+
+        $userInput = $_GET['searchPlanets']; 
+        $planets = file_get_contents('https://swapi.dev/api/planets/'.$userInput); 
+        
+        return $planets;
+    }
+
     public function index(){
 
         // $everything = file_get_contents('https://swapi.dev/api/'); //everything
         // $films = file_get_contents('https://swapi.dev/api/films/'); //films
         // $people = file_get_contents('https://swapi.dev/api/people/'); //people
         // $planets = file_get_contents('https://swapi.dev/api/planets/'); //planets
-        // $species = file_get_contents('https://swapi.dev/api/species/'); //contemts
+        // $species = file_get_contents('https://swapi.dev/api/species/'); //species
         // $starships = file_get_contents('https://swapi.dev/api/starships/'); //starships
         // $vehicles = file_get_contents('https://swapi.dev/api/vehicles/'); //vehicles
         //  dd($planets);

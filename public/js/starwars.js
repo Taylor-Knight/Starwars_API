@@ -55,3 +55,31 @@ function displayFilm(obj){
     var filmContainer = $(document.getElementById('filmContainer'))
     filmContainer.html(html)
 }
+
+function planetSearch(){
+    $.ajax({
+        url: "/planets",
+        type:'GET',
+        data: {
+            searchPlanets: $("#searchPlanets").val()
+        }, success: function(data) { 
+            const obj = JSON.parse(data);
+            displayPlanet(obj)
+            
+      },
+      error: function(xhr) {
+       
+      }
+    });
+}
+
+function displayPlanet(obj){
+    var html = '';
+
+    Object.keys(obj).forEach(key => {
+        html += key + ' : ' + obj[key] + '<br>'
+    });
+    
+    var planetContainer = $(document.getElementById('planetContainer'))
+    planetContainer.html(html)
+}

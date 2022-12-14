@@ -25,13 +25,22 @@
         <button type="button" onClick="peopleSearch()">Search</button></span>
     </div>
     <div id="peopleContainer"></div>
-    
+
     <div>
         <label for="searchFilms">Film Search:</label>
         <span><input type="text" id="searchFilms" name="searchFilms">
         <button type="button" onClick="filmSearch()">Search</button></span>
     </div>
     <div id="filmContainer"></div>
+
+    <div>
+        <label for="searchPlanets">Planet Search:</label>
+        <span><input type="text" id="searchPlanets" name="searchPlanets">
+        <button type="button" onClick="planetSearch()">Search</button></span>
+    </div>
+    <div id="planetContainer"></div>
+
+    
 </body>
 </html>
 
