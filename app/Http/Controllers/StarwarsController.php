@@ -18,6 +18,11 @@ class StarwarsController extends BaseController
         $userInput = $_GET['searchPeople']; //user input from the site
         $people = file_get_contents('https://swapi.dev/api/people/'.$userInput); //speaking with the api
         // dd($people);
+
+        if($people == null){
+            abort(403, 'Unauthorized action.'); 
+        }
+
         return $people;
     }
 
@@ -58,6 +63,10 @@ class StarwarsController extends BaseController
         $userInput = $_GET['searchVehicles']; 
         $vehicles = file_get_contents('https://swapi.dev/api/vehicles/'.$userInput); 
         
+        if($vehicles == null){
+            abort(403, 'Unauthorized action.'); 
+        }
+
         return $vehicles;
     }
 

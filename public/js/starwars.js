@@ -9,8 +9,8 @@ function peopleSearch(){
             displayPerson(obj) //displaying the outcome on the front end
             
       },
-      error: function(xhr) {
-        //to handle error
+      error: function(error) {
+        alert("Error: ID Doesn't Exist") //error message
       }
     });
 }
@@ -39,8 +39,8 @@ function filmSearch(){
             displayFilm(obj)
             
       },
-      error: function(xhr) {
-       
+      error: function(error) {
+        alert("Error: ID Doesn't Exist")
       }
     });
 }
@@ -67,8 +67,8 @@ function planetSearch(){
             displayPlanet(obj)
             
       },
-      error: function(xhr) {
-       
+      error: function(error) {
+        alert("Error: ID Doesn't Exist")
       }
     });
 }
@@ -95,8 +95,8 @@ function starshipSearch(){
             displayStarships(obj)
             
       },
-      error: function(xhr) {
-       
+      error: function(error) {
+        alert("Error: ID Doesn't Exist")
       }
     });
 }
@@ -123,8 +123,8 @@ function vehicleSearch(){
             displayVehicles(obj)
             
       },
-      error: function(xhr) {
-       
+      error: function(error) {
+        alert("Error: ID Doesn't Exist - start at 4") // entries 1, 2 and don't exist on the SWAPI site
       }
     });
 }
