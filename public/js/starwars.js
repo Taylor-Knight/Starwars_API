@@ -84,6 +84,34 @@ function displayPlanet(obj){
     planetContainer.html(html)
 }
 
+function speciesSearch(){
+    $.ajax({
+        url: "/species",
+        type:'GET',
+        data: {
+            searchSpecies: $("#searchSpecies").val()
+        }, success: function(data) { 
+            const obj = JSON.parse(data);
+            displaySpecies(obj)
+            
+      },
+      error: function(error) {
+        alert("Error: ID Doesn't Exist")
+      }
+    });
+}
+
+function displaySpecies(obj){
+    var html = '';
+
+    Object.keys(obj).forEach(key => {
+        html += key + ' : ' + obj[key] + '<br>'
+    });
+    
+    var speciesContainer = $(document.getElementById('speciesContainer'))
+    speciesContainer.html(html)
+}
+
 function starshipSearch(){
     $.ajax({
         url: "/starships",
@@ -96,7 +124,7 @@ function starshipSearch(){
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist")
+        alert("Error: ID Doesn't Exist - start at 2")
       }
     });
 }
