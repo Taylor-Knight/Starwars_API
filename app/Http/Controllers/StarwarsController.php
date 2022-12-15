@@ -63,9 +63,9 @@ class StarwarsController extends BaseController
         $userInput = $_GET['searchVehicles']; 
         $vehicles = file_get_contents('https://swapi.dev/api/vehicles/'.$userInput); 
         
-        if($vehicles == null){
-            abort(403, 'Unauthorized action.'); 
-        }
+        // if($vehicles == null){
+        //     abort(403, 'Unauthorized action.');      ended up displaying errors as alerts
+        // }
 
         return $vehicles;
     }

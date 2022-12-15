@@ -1,7 +1,7 @@
-function capitalizeWords(element) {
+function capitalizeWords(element) { //function to capitalise the fist letter of every key
     // return arr.map(element => {
       return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
-    // });
+    // }); tried as a loop but removed this due to there only 1 word on the keys so it didn't need to loop
   }
 
 function peopleSearch(){
@@ -55,7 +55,7 @@ function displayFilm(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var filmContainer = $(document.getElementById('filmContainer'))
@@ -83,7 +83,7 @@ function displayPlanet(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var planetContainer = $(document.getElementById('planetContainer'))
@@ -111,7 +111,7 @@ function displaySpecies(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var speciesContainer = $(document.getElementById('speciesContainer'))
@@ -130,7 +130,7 @@ function starshipSearch(){
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist - start at 2")
+        alert("Error: ID Doesn't Exist - start at 2") // entry 1 doesn't exist
       }
     });
 }
@@ -139,7 +139,7 @@ function displayStarships(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var starshipContainer = $(document.getElementById('starshipContainer'))
@@ -167,7 +167,7 @@ function displayVehicles(obj){
     var html = '';
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var vehicleContainer = $(document.getElementById('vehicleContainer'))
