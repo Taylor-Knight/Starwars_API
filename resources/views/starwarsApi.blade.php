@@ -26,42 +26,42 @@
         <span><input type="text" id="searchPeople" name="searchPeople">
         <button type="button" onClick="peopleSearch()">Search</button></span>
     </div>
-    <div id="peopleContainer"></div>
+    <div id="peopleContainer" style="margin-top:10px";></div>
 
     <div style="margin-top:20px;>
         <label for="searchFilms">Film Search:</label>
         <span><input type="text" id="searchFilms" name="searchFilms">
         <button type="button" onClick="filmSearch()">Search</button></span>
     </div>
-    <div id="filmContainer"></div>
+    <div id="filmContainer" style="margin-top:10px";></div>
 
     <div style="margin-top:20px;>
         <label for="searchPlanets">Planet Search:</label>
         <span><input type="text" id="searchPlanets" name="searchPlanets">
         <button type="button" onClick="planetSearch()">Search</button></span>
     </div>
-    <div id="planetContainer"></div>
+    <div id="planetContainer" style="margin-top:10px";></div>
 
     <div style="margin-top:20px;>
         <label for="searchSpecies">Species Search:</label>
         <span><input type="text" id="searchSpecies" name="searchSpecies">
         <button type="button" onClick="speciesSearch()">Search</button></span>
     </div>
-    <div id="speciesContainer"></div>
+    <div id="speciesContainer" style="margin-top:10px";></div>
 
     <div style="margin-top:20px;>
         <label for="searchStarships">Starship Search:</label>
         <span><input type="text" id="searchStarships" name="searchStarships">
         <button type="button" onClick="starshipSearch()">Search</button></span>
     </div>
-    <div id="starshipContainer"></div>
+    <div id="starshipContainer" style="margin-top:10px";></div>
 
     <div style="margin-top:20px;>
         <label for="searchVehicles">Vehicle Search:</label>
         <span><input type="text" id="searchVehicles" name="searchVehicles">
         <button type="button" onClick="vehicleSearch()">Search</button></span>
     </div>
-    <div id="vehicleContainer"></div>
+    <div id="vehicleContainer" style="margin-top:10px";></div>
     <!-- vehicles api searches dont appear to be working on the site -->
 </body>
 </html>

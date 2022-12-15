@@ -1,3 +1,9 @@
+function capitalizeWords(element) {
+    // return arr.map(element => {
+      return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+    // });
+  }
+
 function peopleSearch(){
     $.ajax({
         url: "/people",
@@ -15,12 +21,12 @@ function peopleSearch(){
     });
 }
 
-function displayPerson(obj){ //apemding data from the api search to div within the blade
+function displayPerson(obj){ //apending data from the api search to div within the blade
     var html = '';
     // html += obj;
 
     Object.keys(obj).forEach(key => {
-        html += key + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
     });
     
     var peopleContainer = $(document.getElementById('peopleContainer'))
