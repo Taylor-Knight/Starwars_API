@@ -11,7 +11,7 @@ function peopleSearch(){
         data: {
             searchPeople: $("#searchPeople").val() //specifying user input data request
         }, success: function(data) { 
-            const obj = JSON.parse(data);
+            const obj = JSON.parse(data); // initially the data comes through as a string and I had to pars the data to change it to an object which allows me to loop through it
             displayPerson(obj) //displaying the outcome on the front end
             
       },
@@ -26,7 +26,7 @@ function displayPerson(obj){ //apending data from the api search to div within t
     // html += obj;
 
     Object.keys(obj).forEach(key => {
-        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>'
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>' //loopng through the json object and setting how I want it to be desplayed
     });
     
     var peopleContainer = $(document.getElementById('peopleContainer'))
@@ -158,7 +158,7 @@ function vehicleSearch(){
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist - start at 4") // entries 1, 2 and don't exist on the SWAPI site
+        alert("Error: ID Doesn't Exist - start at 4") // entries 1, 2 and 3 don't exist on the SWAPI site
       }
     });
 }

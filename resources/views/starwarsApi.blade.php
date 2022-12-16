@@ -55,7 +55,7 @@
         <button type="button" onClick="starshipSearch()">Search</button></span>
     </div>
     <div id="starshipContainer" style="margin-top:10px";></div>
-    <!-- as with vehicles starship 1 doesn't exist but only noticed after I found the issue with vehicles-->
+    <!-- as with vehicles, starship 1 doesn't exist but only noticed after I found the issue with vehicles-->
 
     <div style="margin-top:20px;>
         <label for="searchVehicles">Vehicle Search:</label>
@@ -63,7 +63,7 @@
         <button type="button" onClick="vehicleSearch()">Search</button></span>
     </div>
     <div id="vehicleContainer" style="margin-top:10px";></div>
-    <!-- vehicles api searches does't appear to be working on the site for 1, 2 and 3. thought that there was an issue with my code,
+    <!-- vehicles api searches does't appear to be working on my site for 1, 2 and 3. thought that there was an issue with my code,
      but realised the enties didn't exist-->
 </body>
 </html>
