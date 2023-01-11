@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\StarwarsController@index');
 //struggles to get display this as a webpage initially when setting up laravel but were resolved when it was set up correctly
-// I had some install not inplace
+// I had some installs not in place
 
 Route::get('/people', 'App\Http\Controllers\StarwarsController@people'); //these routes are so the user input can be sent to the correct API
 Route::get('/films', 'App\Http\Controllers\StarwarsController@films'); 

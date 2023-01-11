@@ -25,6 +25,7 @@
         <label for="searchPeople">People Search:</label>
         <span><input type="text" id="searchPeople" name="searchPeople">
         <button type="button" onClick="peopleSearch()">Search</button></span>
+        <!-- creating the text entry fields and buttons -->
     </div>
     <div id="peopleContainer" style="margin-top:10px";></div>
 
