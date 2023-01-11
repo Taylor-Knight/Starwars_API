@@ -6,32 +6,34 @@ function capitalizeWords(element) { //function to capitalise the fist letter of 
 
 function peopleSearch(){
     $.ajax({
-        url: "/people",
-        type:'GET',
+        url: "/people", // URL was set in the routes file web.php
+        type:'GET', // type of api request
         data: {
-            searchPeople: $("#searchPeople").val() //specifying user input data request
+            searchPeople: $("#searchPeople").val() // specifying user input as the data used in the request
         }, success: function(data) { 
-            const obj = JSON.parse(data); // initially the data comes through as a string and I had to pars the data to change it to an object which allows me to loop through it
+            const obj = JSON.parse(data); // initially the data comes through as a string and I had to parse the data to change
+            // it to an object which allows me to loop through it
             displayPerson(obj) //displaying the outcome on the front end
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist") //error message
+        alert("Error: ID Doesn't Exist") // error message if search is invalid set as an alert
       }
     });
 }
 
-function displayPerson(obj){ //apending data from the api search to div within the blade
+function displayPerson(obj){ // apending data from the api search to div within the StarwaresAPI.blade.php file
     var html = '';
     // html += obj;
 
     Object.keys(obj).forEach(key => {
-        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>' //loopng through the json object and setting how I want it to be desplayed
+        html += capitalizeWords(key) + ' : ' + obj[key] + '<br>' // loopng through the json object and setting how I want it to be
+        // desplayed
     });
     
     var peopleContainer = $(document.getElementById('peopleContainer'))
-    peopleContainer.html(html) //this initially was written 'peopleContainer.apend(html)' 
-    //but changed it so the new searches weren't being printed under the old
+    peopleContainer.html(html) // this initially was written 'peopleContainer.apend(html)' 
+    // but I changed it so the new searches weren't being printed under the old or needing to refresh to clear.
 }
 
 function filmSearch(){
@@ -130,7 +132,8 @@ function starshipSearch(){
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist - 1 and 4 don't exist") // entry 1 and 4 don't exist
+        alert("Error: ID Doesn't Exist - 1 and 4 don't exist") // entry 1 and 4 don't exist on the SWAPI sit
+        // more detail on the starwasApo.Blade.php file
       }
     });
 }
@@ -159,6 +162,7 @@ function vehicleSearch(){
       },
       error: function(error) {
         alert("Error: ID Doesn't Exist - start at 4") // entries 1, 2 and 3 don't exist on the SWAPI site
+        // more detail on the starwasApo.Blade.php file
       }
     });
 }
