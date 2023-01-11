@@ -130,7 +130,7 @@ function starshipSearch(){
             
       },
       error: function(error) {
-        alert("Error: ID Doesn't Exist - start at 2") // entry 1 doesn't exist
+        alert("Error: ID Doesn't Exist - 1 and 4 don't exist") // entry 1 and 4 don't exist
       }
     });
 }

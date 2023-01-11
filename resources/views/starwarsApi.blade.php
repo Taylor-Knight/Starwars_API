@@ -12,7 +12,7 @@
     <style>
         body{
             background-color:black;
-            /* text-align: center; */
+            /* text-align: center; chose to style each div differently */ 
             color: yellow
         }
     </style>
@@ -25,7 +25,7 @@
         <label for="searchPeople">People Search:</label>
         <span><input type="text" id="searchPeople" name="searchPeople">
         <button type="button" onClick="peopleSearch()">Search</button></span>
-        <!-- creating the text entry fields and buttons -->
+        <!-- creating the text entry fields, id, label, button, and on click function -->
     </div>
     <div id="peopleContainer" style="margin-top:10px";></div>
 
@@ -69,7 +69,8 @@
 </body>
 </html>
 
-<!-- <script type="text/javascript"> // struggled with linking a js file to the blade at first.
+<!-- <script type="text/javascript"> // struggled with linking a js file to the blade at first. first also relates to the point made 
+    // in the file web.php around not having set up laravel correctly. once fixed I create the starwars.js file.
     function starwarsApi(){
         $.ajax({
             url: "/people",
